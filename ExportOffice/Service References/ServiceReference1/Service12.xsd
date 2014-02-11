@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ExportOffice.Web" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ExportOffice.Web" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfFactModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FactModel" nillable="true" type="tns:FactModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFactModel" nillable="true" type="tns:ArrayOfFactModel" />
+  <xs:complexType name="FactModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cost" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Month" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FactModel" nillable="true" type="tns:FactModel" />
+  <xs:complexType name="ArrayOfColumns">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Columns" nillable="true" type="tns:Columns" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfColumns" nillable="true" type="tns:ArrayOfColumns" />
+  <xs:complexType name="Columns">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ColumnType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Header" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Columns" nillable="true" type="tns:Columns" />
+</xs:schema>
